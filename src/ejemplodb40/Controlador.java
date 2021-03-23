@@ -26,6 +26,11 @@ public class Controlador extends Conexion {
             return false;
         }
     }
+     public boolean actualizarPersona(int id, String nombre, String apellidos) {
+        Persona personaNueva = new Persona(nombre, apellidos, id);        
+        return this.Actualizar(personaNueva);
+    }
+
 
     public DefaultTableModel personas() {
         String titulos[] = {"Id", "Nombre", "Apellidos"};
